@@ -7,14 +7,54 @@
         android:id="@+id/ivChampion"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:src="@drawable/file"
         android:scaleType="centerCrop"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:id="@+id/tvChamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Champion"
+            android:textColor="@color/white"
+            android:textSize="60sp"/>
+        <TextView
+            android:id="@+id/tvWinRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winrate"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/tvPickRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PickRate"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/tvBanRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BanRate"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Counters:"
+            android:textColor="@color/white"
+            android:textSize="40sp"/>
+        <TextView
+            android:id="@+id/tvCounters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ajsdnkajsdn"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
     </LinearLayout>
 
 </FrameLayout>
