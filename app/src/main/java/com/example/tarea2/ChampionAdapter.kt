@@ -4,7 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class ChampionAdapter (var championList: List<String> = emptyList()): RecyclerView.Adapter<ChampionViewHolder>(){
+class ChampionAdapter (var championList: Champion): RecyclerView.Adapter<ChampionViewHolder>(){
+
+    fun updateList(list: Champion) {
+        championList = list
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChampionViewHolder {
         return ChampionViewHolder(
@@ -12,7 +17,7 @@ class ChampionAdapter (var championList: List<String> = emptyList()): RecyclerVi
         )
     }
     override fun onBindViewHolder(holder: ChampionViewHolder, position: Int) {
-        holder.bind(championList[position])
+        holder.bind(championList.skins[position], championList)
     }
-    override fun getItemCount() = championList.size
+    override fun getItemCount(): Int = championList.skins.size
 }
